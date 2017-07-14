@@ -21,15 +21,15 @@
 # This has been modified from the original software.
 # Copyright (c) 2011,2012 Scott Kitterman <scott@kitterman.com>
 
-from distutils.core import setup
+from setuptools import setup
 import os
 
-version = "0.7.1"
+version = "0.7.2"
 
 setup(
-    name = "dkimpy",
+    name = "valimail_dkimpy",
     version = version,
-    description = "DKIM (DomainKeys Identified Mail)",
+    description = "an internal fork of dkimpy",
     long_description =
     """dkimpy is a Python library that implements DKIM (DomainKeys
 Identified Mail) and ARC (Authenticated Received Chain) email signing and 

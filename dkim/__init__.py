@@ -39,6 +39,7 @@ import re
 import time
 
 from authres import *
+from authres.arc import *
 
 from dkim.canonicalization import (
     CanonicalizationPolicy,
@@ -1008,6 +1009,7 @@ class ARC(DomainSigner):
         raise ParameterError("The Arc-Message-Signature MUST NOT sign ARC-Seal")
 
     ams_header = (b'ARC-Message-Signature', b' ' + ams_value)
+
     try:
       ams_valid = self.verify_sig(sig, include_headers, ams_header, dnsfunc)
     except DKIMException as e:
